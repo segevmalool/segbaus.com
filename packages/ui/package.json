@@ -7,7 +7,7 @@
     "build": "npx webpack --config=webpack/webpack.config.cjs",
     "preserve": "npm run build",
     "serve": "npx serve -p 8080 dist",
-    "dockerize": "docker build . -t segbaus-ui"
+    "dockerize": "docker buildx build --load --platform linux/amd64 -t 192.168.1.3:5000/segbaus-ui ."
   },
   "author": "",
   "license": "ISC",
